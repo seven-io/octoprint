@@ -1,0 +1,101 @@
+<h3>{{ _('sms77 Configuration') }}</h3>
+
+<form class="form-horizontal">
+    <div class="control-group">
+        <div class="controls"
+             title="{{ _('Toggle whether SMS notifications are enabled while a print is in progress.') }}">
+            <label class="checkbox">
+                <input type="checkbox"
+                       data-bind="checked: settings.plugins.sms77.enabled"/>
+                {{ _('Enabled') }}
+            </label>
+        </div>
+    </div>
+
+    <div class="control-group"
+         title="{{ _('Printer name so you can tell which printer finished.') }}">
+        <label class="control-label">
+            {{ _('Unique printer name for identifying') }}
+        </label>
+        <div class="controls">
+            <input class="input-block-level"
+                   data-bind="value: settings.plugins.sms77.printer_name"/>
+        </div>
+    </div>
+
+    <div class="control-group"
+         title="{{ _('Print completion notifications will be sent as SMS to these phone number(s).') }}">
+        <label class="control-label">
+            {{ _('Recipient phone number(s) separated by comma') }}
+        </label>
+        <div class="controls">
+            <input class="input-block-level"
+                   data-bind="value: settings.plugins.sms77.recipients"/>
+        </div>
+    </div>
+
+    <h4>{{ _('sms77 Settings') }}</h4>
+
+    <div class="control-group" title="{{ _('API Key') }}">
+        <label class="control-label">
+            {{ _('API Key') }}
+        </label>
+        <span class="help-block">
+            {{ _('Required for sending - register now for free @') }} <a
+                href="https://app.sms77.io/anmelden">sms77</a>.
+        </span>
+        <div class="controls">
+            <input class="input-block-level"
+                   data-bind="value: settings.plugins.sms77.api_key"/>
+        </div>
+    </div>
+
+    <div class="control-group" title="{{ _('From Number.') }}">
+        <label class="control-label">
+            {{ _('From Number') }}
+        </label>
+        <span class="help-block">
+            {{ _('Used as the sender value. A maximum of 11 alphanumeric or 16 numeric characters.') }}
+        </span>
+        <div class="controls">
+            <input class="input-block-level" maxlength="16"
+                   data-bind="value: settings.plugins.sms77.sender"/>
+        </div>
+    </div>
+
+    <h4>{{ _('Message Content') }}</h4>
+
+    <p>
+        {{ _('The SMS template may contain the following tags') }}
+    </p>
+    <dl>
+        <dt>{filename}</dt>
+        <dd>{{ _('The prints file name') }}</dd>
+
+        <dt>{elapsed_time}</dt>
+        <dd>{{ _('The print duration') }}</dd>
+
+        <dt>{printer_name}</dt>
+        <dd>{{ _('The printers name') }}</dd>
+    </dl>
+
+    <div class="control-group" title="{{ _('Content of notification message') }}">
+        <label class="control-label">{{ _('Message') }}</label>
+        <div class="controls">
+            <input class="input-block-level"
+                   data-bind="value: settings.plugins.sms77.message_template"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: settings.plugins.sms77.flash"/>
+                {{ _('Send as flash?') }}
+            </label>
+            <span class="help-block">
+                 {{ _('Depending on the phone model, flash SMS get displayed directly in the receivers display are not being saved.?') }}
+          </span>
+        </div>
+    </div>
+</form>
