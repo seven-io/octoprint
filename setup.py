@@ -16,7 +16,7 @@ plugin_author_email = "support@sms77.io"
 
 plugin_url = "https://github.com/sms77io/octoprint"
 
-plugin_license = "AGPLv3"
+plugin_license = "MIT"
 
 plugin_requires = ['requests']
 

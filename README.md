@@ -1,3 +1,5 @@
+![](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77 Logo")
+
 # OctoPrint-Sms77
 
 Plugin to send SMS after OctoPrint has completed a job. Based on [OctoPrint-EmailNotifier](https://github.com/anoved/OctoPrint-EmailNotifier).
@@ -25,7 +27,8 @@ After installation, go to `Settings -> Plugins -> sms77` and fill out the form.
 
 `sender` the value to use as the SMS sender
 
+## Support
 
-## License
+Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact/).
 
-Licensed under the terms of the [AGPLv3](http://opensource.org/licenses/AGPL-3.0).
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
