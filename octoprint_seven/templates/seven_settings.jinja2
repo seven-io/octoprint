@@ -1,4 +1,4 @@
-<h3>{{ _('sms77 Configuration') }}</h3>
+<h3>{{ _('seven Configuration') }}</h3>
 
 <form class="form-horizontal">
     <div class="control-group">
@@ -6,7 +6,7 @@
              title="{{ _('Toggle whether SMS notifications are enabled while a print is in progress.') }}">
             <label class="checkbox">
                 <input type="checkbox"
-                       data-bind="checked: settings.plugins.sms77.enabled"/>
+                       data-bind="checked: settings.plugins.seven.enabled"/>
                 {{ _('Enabled') }}
             </label>
         </div>
@@ -19,7 +19,7 @@
         </label>
         <div class="controls">
             <input class="input-block-level"
-                   data-bind="value: settings.plugins.sms77.printer_name"/>
+                   data-bind="value: settings.plugins.seven.printer_name"/>
         </div>
     </div>
 
@@ -30,11 +30,11 @@
         </label>
         <div class="controls">
             <input class="input-block-level"
-                   data-bind="value: settings.plugins.sms77.recipients"/>
+                   data-bind="value: settings.plugins.seven.recipients"/>
         </div>
     </div>
 
-    <h4>{{ _('sms77 Settings') }}</h4>
+    <h4>{{ _('seven Settings') }}</h4>
 
     <div class="control-group" title="{{ _('API Key') }}">
         <label class="control-label">
@@ -42,11 +42,11 @@
         </label>
         <span class="help-block">
             {{ _('Required for sending - register now for free @') }} <a
-                href="https://app.sms77.io/anmelden">sms77</a>.
+                href="https://app.seven.io/anmelden">seven</a>.
         </span>
         <div class="controls">
             <input class="input-block-level"
-                   data-bind="value: settings.plugins.sms77.api_key"/>
+                   data-bind="value: settings.plugins.seven.api_key"/>
         </div>
     </div>
 
@@ -59,7 +59,7 @@
         </span>
         <div class="controls">
             <input class="input-block-level" maxlength="16"
-                   data-bind="value: settings.plugins.sms77.sender"/>
+                   data-bind="value: settings.plugins.seven.sender"/>
         </div>
     </div>
 
@@ -83,14 +83,14 @@
         <label class="control-label">{{ _('Message') }}</label>
         <div class="controls">
             <input class="input-block-level"
-                   data-bind="value: settings.plugins.sms77.message_template"/>
+                   data-bind="value: settings.plugins.seven.message_template"/>
         </div>
     </div>
 
     <div class="control-group">
         <div class="controls">
             <label class="checkbox">
-                <input type="checkbox" data-bind="checked: settings.plugins.sms77.flash"/>
+                <input type="checkbox" data-bind="checked: settings.plugins.seven.flash"/>
                 {{ _('Send as flash?') }}
             </label>
             <span class="help-block">

@@ -1,20 +1,20 @@
 # coding=utf-8
 
-plugin_identifier = "sms77"
+plugin_identifier = "seven"
 
-plugin_package = "octoprint_sms77"
+plugin_package = "octoprint_seven"
 
-plugin_name = "OctoPrint-Sms77"
+plugin_name = "OctoPrint-Seven"
 
 plugin_version = "0.1.0"
 
 plugin_description = "Send SMS after OctoPrint job completion."
 
-plugin_author = "sms77 e.K."
+plugin_author = "seven communications GmbH & Co. KG"
 
-plugin_author_email = "support@sms77.io"
+plugin_author_email = "support@seven.io"
 
-plugin_url = "https://github.com/sms77io/octoprint"
+plugin_url = "https://github.com/seven-io/octoprint"
 
 plugin_license = "MIT"
 

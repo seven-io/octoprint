@@ -4,7 +4,7 @@ from requests import post
 import octoprint.plugin
 
 
-class Sms77Plugin(
+class SevenPlugin(
     octoprint.plugin.StartupPlugin,
     octoprint.plugin.SettingsPlugin,
     octoprint.plugin.TemplatePlugin,
@@ -12,7 +12,7 @@ class Sms77Plugin(
 ):
     def get_template_configs(self):
         return [
-            dict(type="settings", name="sms77", custom_bindings=False)
+            dict(type="settings", name="seven", custom_bindings=False)
         ]
 
     def get_settings_defaults(self):
@@ -58,18 +58,18 @@ class Sms77Plugin(
         for to in self._settings.get(['recipients']).split(','):
             try:
                 sms_params['to'] = to
-                post('https://gateway.sms77.io/api/sms', headers=headers, json=sms_params)
+                post('https://gateway.seven.io/api/sms', headers=headers, json=sms_params)
             except Exception as e:
-                self._logger.error("sms77 SMS error: %s" % (str(e)))
+                self._logger.error("seven SMS error: %s" % (str(e)))
                 continue
             else:
-                self._logger.info("sms77 SMS sent to %s" % to)
+                self._logger.info("seven SMS sent to %s" % to)
 
         return True
 
 
-__plugin_description__ = "Send SMS via sms77 within OctoPrint"
-__plugin_implementation__ = Sms77Plugin()
-__plugin_name__ = "sms77"
+__plugin_description__ = "Send SMS via seven within OctoPrint"
+__plugin_implementation__ = SevenPlugin()
+__plugin_name__ = "seven"
 __plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_version__ = "1.0.0"

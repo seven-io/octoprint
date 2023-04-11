@@ -1,4 +1,4 @@
 include README.md
-recursive-include octoprint_sms77/templates *
-recursive-include octoprint_sms77/translations *
-recursive-include octoprint_sms77/static *
+recursive-include octoprint_seven/templates *
+recursive-include octoprint_seven/translations *
+recursive-include octoprint_seven/static *
